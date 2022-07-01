@@ -3,12 +3,12 @@ const webpack = require("webpack");
 module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave: false,
+  configureWebpack: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+      }),
+    ],
+  },
 });
-module.exports = {
-  plugins: [
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-    }),
-  ],
-};
