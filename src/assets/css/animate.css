@@ -288,3 +288,35 @@
   -moz-animation: fx-global-reverse 1.6s 1 ease-in-out;
   -webkit-animation: fx-global-reverse 1.6s 1 ease-in-out;
 }
+
+@keyframes footer-active {
+  0% {
+    height: 292px;
+  }
+
+  100% {
+    height: 0;
+  }
+}
+
+.footer_box.active {
+  animation: footer-active 1.2s 1 linear;
+  -moz-animation: footer-active 1.2s 1 linear;
+  -webkit-animation: footer-active 1.2s 1 linear;
+}
+
+@keyframes footer-active-reverse {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 292px;
+  }
+}
+
+.footer_box.active_reverse {
+  animation: footer-active-reverse 1.2s 1 linear;
+  -moz-animation: footer-active-reverse 1.2s 1 linear;
+  -webkit-animation: footer-active-reverse 1.2s 1 linear;
+}

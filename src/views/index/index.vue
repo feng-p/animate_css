@@ -32,7 +32,7 @@ export default {
         { name: "主动服务", index: 3 }
       ],
       slotcardShow: false,
-      selectIndex: "",
+      selectIndex: null,
     }
   },
   create() { },
@@ -44,6 +44,7 @@ export default {
         event.preventDefault();
       } else {
         $('.nav-el').eq(item.index).addClass('active').siblings().addClass('inactive');
+        $(".footer_box").addClass("active")
         setTimeout(() => {
           this.slotcardShow = true;
           this.selectIndex = item.index;
@@ -52,13 +53,15 @@ export default {
     },
 
     goIndex() {
-      $(".slotCard").addClass("active_reverse").removeClass("active")
       this.slotcardShow = false;
       this.$nextTick(() => {
+        $(".footer_box").addClass("active_reverse")
         $('.nav-el').eq(this.selectIndex).addClass("active_reverse").siblings().addClass("inactive_reverse");
       });
       setTimeout(() => {
         $('.nav-el').removeClass("active inactive active_reverse inactive_reverse");
+        $(".footer_box").removeClass("active active_reverse");
+        this.selectIndex = null;
       }, 1200)
     },
 
