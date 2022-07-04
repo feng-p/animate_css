@@ -16,33 +16,9 @@ export default new Router({
       },
     },
     {
-      path: "/mzjf",
-      name: "Mzjf",
-      component: () => import("@/views/mzjf/index"),
-      meta: {
-        index: 2,
-      },
-    },
-    {
-      path: "/zdfw",
-      name: "Zdfw",
-      component: () => import("@/views/zdfw/index"),
-      meta: {
-        index: 2,
-      },
-    },
-    {
-      path: "/zzgh",
-      name: "Zzgh",
-      component: () => import("@/views/zzgh/index"),
-      meta: {
-        index: 2,
-      },
-    },
-    {
-      path: "/qyjd",
-      name: "Qyjd",
-      component: () => import("@/views/qyjd/index"),
+      path: "/slotCard",
+      name: "SlotCard",
+      component: () => import("@/views/slotCard/index"),
       meta: {
         index: 2,
       },
